@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using tabuleiro;
 using xadrez;
 
@@ -12,12 +8,14 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
+
             try
             {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
 
                 while (!partida.terminada)
                 {
+
                     try
                     {
                         Console.Clear();
@@ -40,21 +38,19 @@ namespace xadrez_console
 
                         partida.realizaJogada(origem, destino);
                     }
-                    catch (TabuleiroExeption e)
+                    catch (TabuleiroException e)
                     {
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
                     }
-
                 }
-
-                Tela.imprimirTabuleiro(partida.tab);
+                Console.Clear();
+                Tela.imprimirPartida(partida);
             }
-            catch (TabuleiroExeption e)
+            catch (TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
             }
-
 
             Console.ReadLine();
         }
