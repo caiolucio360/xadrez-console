@@ -1,4 +1,4 @@
-# xadrez-console c# .net
+# xadrez-console c# .Net
 Estudando programação orientada a objetos
 
 # Técnicas de orientação a objetos aplicadas:
